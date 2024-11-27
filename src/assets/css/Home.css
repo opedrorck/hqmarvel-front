@@ -1,0 +1,62 @@
+.comics {
+    box-sizing: content-box;
+    overflow-y: scroll;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.comics::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
+}
+
+.comicContent {
+    position: relative;
+    max-width: 320px;
+    max-height: 560px;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: auto;
+    background-color: #FFF;
+    margin-bottom: 20px;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+
+    p {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}
+
+.title-comics {
+    padding: 0 10px;
+}
+
+.likeButton {
+    all: unset;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+}
+
+.unlike{
+    fill: #FFF;
+}
+.like {
+    fill: red;
+}
+
+.loadButton{
+    margin: auto;
+    height: min-content;
+}

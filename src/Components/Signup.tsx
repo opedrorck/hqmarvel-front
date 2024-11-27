@@ -1,37 +1,31 @@
-import React, { useState } from 'react';
+import React from "react";
 
 const Signup: React.FC = () => {
-
-
   const handleSignup = async (e: React.FormEvent) => {
     e.preventDefault();
   };
 
   return (
-    <div>
-      <h2 >Cadastro</h2>
+    <main className="main">
+    <div className="wrapper">
+      <h2>Cadastro</h2>
       <form onSubmit={handleSignup}>
-        <input
-          type="email"
-          placeholder="Email"
-          required
-        />
-        <input
-          type="password"
-          placeholder="Senha"
-          required
-        />
-        <input
-          type="password"
-          placeholder="Confirme sua senha"
-          required
-        />
-        <button type="submit">Cadastrar</button>
+        <div className="input-box">
+          <input type="email" placeholder="Email" required />
+        </div>
+        <div className="input-box">
+          <input type="password" placeholder="Senha" required />
+        </div>
+        <div className="input-box">
+          <input type="password" placeholder="Confirme sua senha" required />
+        </div>
+        <button type="submit" className="btn">
+          Cadastrar
+        </button>
       </form>
     </div>
+    </main>
   );
 };
-
-
 
 export default Signup;
