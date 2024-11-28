@@ -4,8 +4,8 @@ import { Comic } from "../interfaces/Comics";
 import { getComics } from "../utils/api";
 import Like from "../assets/imgs/Like.svg?react";
 import LikeFill from "../assets/imgs/LikeFill.svg?react";
-import "../assets/css/Home.css";
 import { incremented } from "../context/store";
+import "../assets/css/Home.scss";
 
 
 const Home: React.FC = () => {
@@ -55,7 +55,7 @@ const Home: React.FC = () => {
             <button className="likeButton" onClick={()=>handleClick(comic.id)}>{isNaN(1)?<Like className="unlike"/>:<LikeFill className="like"/>}</button>
           </div>
         ))}
-        <button className="loadButton" onClick={() => dispatch(incremented())}>load more</button>
+        <button className="loadButton" onClick={() => dispatch(incremented())}>Carregar mais</button>
       </section>
     </main>
   );

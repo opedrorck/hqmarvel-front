@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import '../assets/css/App.css'
+import { store } from '../context/store';
 import Login from './Login'
 import Signup from './Signup'
 import Quadrinhos from './Quadrinhos';
 import Home from './Home';
-import { store } from '../context/store';
+import '../assets/css/App.scss'
 
 const App: React.FC = () => {
 

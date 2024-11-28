@@ -23,12 +23,14 @@
     position: relative;
     max-width: 320px;
     max-height: 560px;
-    box-sizing: border-box;
+    box-sizing: content-box;
     padding: 10px;
     margin: auto;
     background-color: #FFF;
     margin-bottom: 20px;
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+
+    transition: all 1s ease-in-out;
 
     p {
         overflow: hidden;
@@ -49,14 +51,42 @@
 
 }
 
-.unlike{
+.unlike {
     fill: #FFF;
 }
+
 .like {
     fill: red;
 }
 
-.loadButton{
+.loadButton {
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 10px;
     margin: auto;
     height: min-content;
+    background-color: #FFF;
+    padding: 15px;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+}
+.loadButton:hover {
+    animation: bounce 2s infinite; 
+}
+
+@keyframes bounce {
+    0% {
+        padding: 15px;
+    }
+    50% {
+        padding: 25px;
+    }
+    100% {
+        padding: 15px;
+    }
+  }
+
+
+.comicContent:hover {
+    padding: 20px;
+    font-size: 18px;
 }

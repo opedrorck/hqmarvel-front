@@ -1,4 +1,4 @@
-import "../assets/css/Login.css"
+import "../assets/css/Login.scss"
 
 function Quadrinhos() {
     return (

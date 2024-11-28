@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import "../assets/css/Login.css"
+import "../assets/css/Login.scss"
 
 const Login: React.FC = () =>  {
     const navigate = useNavigate();
