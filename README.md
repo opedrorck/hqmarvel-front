@@ -7,6 +7,8 @@
 - **TypesScript** para criação de tipagem
 - **SASS** para estilização das páginas
 
+</br>
+
 ## Instalação
 
 **1.Clone o repositório: git clone https:** //github.com/Danilosrr/desafio-03-aws-react
@@ -16,6 +18,15 @@
 **3.Instale as dependências:** npm install
 
 **4.Inicie o servidor de desenvolvimento:** npm run dev
+
+</br>
+
+## Repositorios
+
+- [**Front** ](https://github.com/opedrorck/hqmarvel-front)
+- [**Back** ](https://github.com/nathanseixas/siteMarvel)
+
+</br>
 
 ## Telas
 
