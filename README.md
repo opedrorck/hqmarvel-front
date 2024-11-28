@@ -19,9 +19,14 @@
 
 ## Telas
 
-<div style="gap: 20px">
-    <img src="./src//assets/imgs/doc/login.png" style="height: 300px">
-    <img src="./src//assets/imgs/doc/cadastro.png" style="height: 300px"><br/>
-    <img src="./src//assets/imgs/doc/home.png" style="height: 300px">
-    <img src="./src//assets/imgs/doc/home2.png" style="height: 300px"><br/>
-</div>
+#### Login
+<img src="./src//assets/imgs/doc/login.png" style="height: 300px">
+
+#### Cadastro
+<img src="./src//assets/imgs/doc/cadastro.png" style="height: 300px">
+
+#### Home
+<img src="./src//assets/imgs/doc/home.png" style="height: 300px">
+
+#### 
+<img src="./src//assets/imgs/doc/home2.png" style="height: 300px">
