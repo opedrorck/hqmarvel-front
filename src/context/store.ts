@@ -1,25 +1,35 @@
-import { createSlice, configureStore } from '@reduxjs/toolkit'
+import { createSlice, configureStore } from '@reduxjs/toolkit';
 
 const counterSlice = createSlice({
   name: 'counter',
   initialState: {
-    value: 0
+    offset: 0,
+    comics: [0],
   },
   reducers: {
-    incremented: state => {
-      state.value += 20
+    incremented: (state) => {
+      state.offset += 20;
     },
-    reset: state => {
-      state.value = 0
-    }
-  }
-})
+    reset: (state) => {
+      state.offset = 0;
+    },
+    add: (state, action) => {
+      state.comics.push(+action.payload);
+    },
+    remove: (state, action) => {
+      const index = state.comics.indexOf(+action.payload);
+      if (index !== -1) {
+        state.comics.splice(index, 1);
+      }
+    },
+  },
+});
 
-export const { incremented, reset } = counterSlice.actions
+export const { incremented, reset, add, remove } = counterSlice.actions;
 
 export const store = configureStore({
-  reducer: counterSlice.reducer
-})
+  reducer: counterSlice.reducer,
+});
 
 // Can still subscribe to the store
-store.subscribe(() => console.log(store.getState()))
+store.subscribe(() => console.log(store.getState()));

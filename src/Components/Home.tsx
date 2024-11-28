@@ -4,18 +4,23 @@ import { Comic } from "../interfaces/Comics";
 import { getComics } from "../utils/api";
 import Like from "../assets/imgs/Like.svg?react";
 import LikeFill from "../assets/imgs/LikeFill.svg?react";
-import { incremented } from "../context/store";
+import { add, incremented, remove } from "../context/store";
 import "../assets/css/Home.scss";
 
 
 const Home: React.FC = () => {
   const dispatch = useDispatch();
-  const offset = useSelector((state:{value:number}) => state.value);
+  const offset = useSelector((state:{offset:number}) => state.offset);
+  const likedComics = useSelector((state:{comics:number[]}) => state.comics);
   const [comics, setComics] = useState<Comic[]>([]);
 
-  const handleClick = (id: number) => {
-    console.log(id, "click");
-  };
+  const handleLike = (id:number) => {
+    if(likedComics.includes(id)){
+      dispatch(remove(id))
+    } else {
+      dispatch(add(id))
+    }
+  }
 
   useEffect(() => {
     async function load() {
@@ -52,7 +57,11 @@ const Home: React.FC = () => {
                   : "1999"}
               </p>
             </div>
-            <button className="likeButton" onClick={()=>handleClick(comic.id)}>{isNaN(1)?<Like className="unlike"/>:<LikeFill className="like"/>}</button>
+            <button className="likeButton" onClick={()=>handleLike(comic.id)}>
+              {likedComics.includes(comic.id)?
+              <LikeFill className="like"/>:
+              <Like className="unlike"/>}
+            </button>
           </div>
         ))}
         <button className="loadButton" onClick={() => dispatch(incremented())}>Carregar mais</button>
